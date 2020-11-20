@@ -18,6 +18,7 @@ const helmet = require("helmet");
 const app = express();
 
 // view engine setup
+// subjecting this to github actions
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
