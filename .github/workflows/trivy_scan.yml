@@ -14,12 +14,12 @@ jobs:
       
       - name: Build an image from Dockerfile
         run: |
-          docker build -t appsecengineer/node-app:${{ github.sha }} .
+          docker build -t prakashar11/node-app:${{ github.sha }} .
       
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'appsecengineer/node-app:${{ github.sha }}'
+          image-ref: 'prakashar11/node-app:${{ github.sha }}'
           format: 'template'
           ignore-unfixed: true
           severity: 'CRITICAL,HIGH'
